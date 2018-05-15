@@ -38,7 +38,47 @@
     <div class="app-page" data-page="page3">LanyxSoft Messenger
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
-        <div class="app-title">LanyxSoft Messenger</div>
+        <div class="app-title">
+        
+        
+        
+        
+        
+          <head>
+    <style>
+      .onlinestat { width: 150px;text-align: center;border-radius: 25px;color: white;background: linear-gradient(to bottom right, blue, cyan); }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      function WifiStatus() {
+        if (navigator.onLine == true) {
+          document.getElementById("status").innerHTML = "is online";
+        } else {
+          document.getElementById("status").innerHTML = "is offline";
+        }}
+      
+      window.addEventListener('offline', WifiStatus);
+      window.addEventListener('online', WifiStatus);
+      
+      $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?') 
+      .done (function(location) {
+        $('#ip').html(location.IPv4);               
+      });
+WifiStatus();
+    </script> 
+    </head>
+    <body>
+       <div class="onlinestat"><span id="ip"></span><div id="status">is online</div></div>
+        
+    </body>
+        
+        
+        
+        
+        
+        
+        </div>
+      
       </div>
       <div class="app-content">
         Page 3 is more boring
