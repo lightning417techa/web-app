@@ -36,15 +36,15 @@
       </div>
     </div>
     <div class="app-page" data-page="page3">
-      <div id="ip"></div>
+      <div id="wifistatus"><div id="ip"></div></div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       function WifiStatus() {
         if (navigator.onLine == true) {
-          document.getElementById("ip").innerHTML = "is online";
+          document.getElementById("wifistatus").innerHTML = "is online";
         } else {
-          document.getElementById("ip").innerHTML = "is offline";
+          document.getElementById("wifistatus").innerHTML = "is offline";
         }}
       
       window.addEventListener('offline', WifiStatus);
