@@ -1,3 +1,4 @@
+alert("hi");
 var tciket="";if(navigator.onLine == true) {ticket="yes";}else{ticket="no";}</script>
           <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script> 
           var a = new Date();var mt = a.getMonth() + 1;var dy = a.getDate();var yr = a.getFullYear();var tm = a.getHours()+":"+a.getMinutes();    
