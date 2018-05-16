@@ -3,7 +3,7 @@
     <title>My App</title>
     <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="css/CSS.css"> /* cdn.kik.com/app/3.0.0/app.min.css */
+    <link rel="stylesheet" href="css/main.css"> /* cdn.kik.com/app/3.0.0/app.min.css */
     <link rel="apple-touch-icon" href="meta/App-logo.PNG">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -24,6 +24,10 @@
           <div class="app-button" data-target="page3">LanyxSoft Messenger</div>
         </div>
       </div>
+      <div class="app-section">
+          <div class="app-button" data-target="page4">Login</div>
+        </div>
+      </div>
     </div>
 
     <div class="app-page" data-page="page2">
@@ -33,10 +37,17 @@
       </div>
       <div class="app-content">
         Page 2 is boring
-        <button class="app-button"></button>
       </div>
     </div>
     <div class="app-page" data-page="page3">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title"></div></div>
+      <div class="app-content">
+        
+      </div>
+    </div>
+    <div class="app-page" data-page="page4">
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div></div>
@@ -58,6 +69,10 @@
       });
       
       App.controller('page3', function (page) {
+        // put stuff here
+      });
+      
+      App.controller('page4', function (page) {
         // put stuff here
       });
 
