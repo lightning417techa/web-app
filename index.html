@@ -35,7 +35,30 @@
         Page 2 is boring
       </div>
     </div>
-    <div class="app-page" data-page="page3">LanyxSoft mMessenger
+    <div class="app-page" data-page="page3">
+      <body>
+        <div id="ip"></div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      function WifiStatus() {
+        if (navigator.onLine == true) {
+          document.getElementById("ip").innerHTML = "is online";
+        } else {
+          document.getElementById("ip").innerHTML = "is offline";
+        }}
+      
+      window.addEventListener('offline', WifiStatus);
+      window.addEventListener('online', WifiStatus);
+      
+      $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?') 
+      .done (function(location) {
+        $('#ip').html(location.IPv4);               
+      });
+WifiStatus();
+    </script> 
+        </body>
+        
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div>
