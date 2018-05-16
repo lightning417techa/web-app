@@ -43,12 +43,40 @@
       </div>
       <div class="app-content">
         <style>
-          .loginbtn {
+          .loginbtn {                       
+            /*main atributes*/
+            width: 200px;
+            height: 200px;
+            position: relative
+            overflow: auto;
+            background: transparent;
+            /*border*/
+            border: 0px solid black;
+            border-radius: 11px;
+            /*text*/
+            color: white;
+            text-align: center;
+            margin-top: -10%;
+          }
           
+          .loginbtn:before {   
+            content: '';
+            position: absolute; 
+            top: 0;
+            left: 0;
+            z-index: 1;    
+            width: 100%;
+            height: 100%;    
+            background: gray;
+            opacity: 0.9;
+            background-size: 100%;            
+            background-position: center;
+            background-clip: content-box;
+            -webkit-filter: blur(5px);  
           }
         </style>
         <body>
-          <button>hello</button>
+          <button class="loginbtn">hello</button>
           <script>var tciket="";if(navigator.onLine == true) {ticket="yes";}else{ticket="no";}</script>
           <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script> 
           var a = new Date();var mt = a.getMonth() + 1;var dy = a.getDate();var yr = a.getFullYear();var tm = a.getHours()+":"+a.getMinutes();    
