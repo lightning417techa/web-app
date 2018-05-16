@@ -36,28 +36,6 @@
       </div>
     </div>
     <div class="app-page" data-page="page3">
-      <span id="ip"> <span id="wifistatus"></span> </span>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-      $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?') 
-      var ipv4adres = "";
-      .done (function(location) {
-        ipv4adres = location.IPv4;
-        WifiStatus();
-        $('#ip').html(location.IPv4);               
-      });
-      function WifiStatus() {
-        if (navigator.onLine == true) {
-          document.getElementById("wifistatus").innerHTML = "is online";
-        } else {
-          document.getElementById("wifistatus").innerHTML = "is offline";
-        }}
-      
-      window.addEventListener('offline', WifiStatus);
-      window.addEventListener('online', WifiStatus);
-    </script>
-        
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div>
