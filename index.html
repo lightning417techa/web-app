@@ -9,6 +9,20 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <style>
       /* put your styles here */
+	    .fileuploadprgss {display:inline-block;width:100%;height:
+	10px;padding:0px 0 0 0;margin:0;margin-left: auto;
+	margin-right:auto;background:none;border: 0;border-radius: 15px;
+	text-align: center;position:center;font-family: Arial, Helvetica, sans-serif;font-size: 0.8em; }
+ .fileuploadprgss::-webkit-progress-bar {height:8px;width:100%;margin:0 auto;
+	background-color: #CCC;border-radius: 15px;box-shadow:0px 0px 0px #777 inset; }
+.fileuploadprgss::-webkit-progress-value {
+	display:inline-block;float:left;height:8px;
+	margin:0px -10px 0 0;background: #00F1FF;border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset; }
+.fileuploadprgss:after {
+	margin:-26px 0 0 -7px;padding:0;display:inline-block;
+	float:left;content: attr(value) '%'; }
+	    
     </style>
   </head>
   <body>
@@ -48,20 +62,8 @@
     </div>
     <div class="app-page" data-page="page4">
 	    <style>
-.fileuploadprgss {display:inline-block;width:100%;height:
-	10px;padding:0px 0 0 0;margin:0;margin-left: auto;
-	margin-right:auto;background:none;border: 0;border-radius: 15px;
-	text-align: center;position:center;font-family: Arial, Helvetica, sans-serif;font-size: 0.8em; }
- .fileuploadprgss::-webkit-progress-bar {height:8px;width:100%;margin:0 auto;
-	background-color: #CCC;border-radius: 15px;box-shadow:0px 0px 0px #777 inset; }
-.fileuploadprgss::-webkit-progress-value {
-	display:inline-block;float:left;height:8px;
-	margin:0px -10px 0 0;background: #00F1FF;border-radius: 15px;
-	box-shadow:0px 0px 6px #777 inset; }
-.fileuploadprgss:after {
-	margin:-26px 0 0 -7px;padding:0;display:inline-block;
-	float:left;content: attr(value) '%'; }
-       </style>
+
+	    </style>
 	    
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
