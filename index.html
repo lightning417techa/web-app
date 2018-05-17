@@ -146,6 +146,7 @@ var starsRef = storageRef.child('images/');
 	    
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
+		  alert(this.url);
 		  var filepathforimg = file.name;
 	  alert(filepathforimg);
           var img = document.getElementByid("image");
