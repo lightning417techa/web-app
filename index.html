@@ -100,11 +100,11 @@
 		<progress class="fileuploadprgss" id="uploader" value="0" max="100">0%</progress>
 		<input type="file" id="fileButton" value="upload"/>
 <img id='image'>
+		
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 	</div>
 
 
-
-<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
   
         
         
@@ -147,7 +147,6 @@
     messagingSenderId: "247113062436"
   };
   firebase.initializeApp(config);
-  //------------------------------------
   var uploader = document.getElementById('uploader');
   var fileButton =         document.getElementById('fileButton');
   fileButton.addEventListener('change', function(e){
