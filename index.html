@@ -143,11 +143,11 @@
 var starsRef = storageRef.child('images/');
 // Get the download URL
 	  //alert(starsRef.getDownloadURL());
-	  alert(file.name);
+	  //alert(file.name);
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
-	  //alert(this.url);
+	  alert(this.url);
           var img = document.getElementByid("image");
 	  img.src = "https://firebasestorage.googleapis.com/v0/b/fitbit-flex2-integration.appspot.com/o/img%2" + file.name + "?alt=media&token=6c380808-1ac1-432b-9944-befc912f6de8";
 	  //alert(img.src + "hi");
