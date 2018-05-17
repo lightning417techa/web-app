@@ -144,6 +144,8 @@ var starsRef = storageRef.child('images/');
 // Get the download URL
 	  starsRef.getDownloadURL();
 	  
+	  hides();
+	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
 		  var filepathforimg = file.name;
@@ -154,6 +156,22 @@ var starsRef = storageRef.child('images/');
 	  });
 	  
 });});      
+	    
+	var up = true;
+    var value1 = 0;
+    var increment = 1;
+    var ceiling = 100;
+    var int = 1;
+
+    function hides() {
+        var hideProgressbar = document.getElementById("progress");
+        if (value1 == 100) {         
+            hideProgressbar.style.display = "none";            
+        } else {
+            //embed1.style.display = "none";
+            hideProgressbar.style.display = "block";            
+        }}  
+	   
 	    
     </script>
 	</body>
