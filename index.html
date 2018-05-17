@@ -46,6 +46,8 @@
         
 	      
 	      
+	      <script src="web-app/js/Pages/page-2/index.js"></script>
+	      <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 	      
 	      
 	<style>
@@ -99,58 +101,7 @@
 		<input type="file" id="fileButton" value="upload"/>
 <img id='image'>
 	</div>
-<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-<script>
-	function uploadimg() {
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAz0J5c0czjU3S2PddQdFxmnd52hGHqtWQ",
-    authDomain: "fitbit-flex2-integration.firebaseapp.com",
-    databaseURL: "https//fitbit-flex2-integration.firebaseio.com",
-    projectId: "fitbit-flex2-integration",
-    storageBucket: "fitbit-flex2-integration.appspot.com",
-  };
-  firebase.initializeApp(config);
-  //------------------------------------
-  var uploader = document.getElementById('uploader');
-  var fileButton =         document.getElementById('fileButton');
-  fileButton.addEventListener('change', function(e){
-  var file = e.target.files[0];
-  var storageRef = firebase.storage().ref('img/'+file.name);
-  var task = storageRef.put(file);
-  task.on('state_changed', function progress(snapshot) {
-    var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
-    uploader.value = percentage;
-  }, function error(err) {
-  },function complete() {
-var starsRef = storageRef.child('images/image.jpg');
-	  // Points to the root reference
-var storageRef = firebase.storage().ref();
-
-// Points to 'images'
-var imagesRef = storageRef.child('images');
-
-// Points to 'images/space.jpg'
-// Note that you can use variables to create child values
-var fileName = 'space.jpg';
-var spaceRef = imagesRef.child(fileName);
-
-// File path is 'images/space.jpg'
-var path = spaceRef.fullPath
-
-// File name is 'space.jpg'
-var name = spaceRef.name
-
-// Points to 'images'
-var imagesRef = spaceRef.parent;
-// Get the download URL
-spaceRef.getDownloadURL().then(function(url) {
-  var img = document.getElementByid('image');
-img.src= this.url;
-});
-  });});  
-	}
-</script>
+	      
 	      
 	      
 	      
