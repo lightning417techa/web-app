@@ -144,7 +144,7 @@ var starsRef = storageRef.child('images/App-logo.PNG');
 // Get the download URL
 	  alert(starsRef.getDownloadURL());
 starsRef.getDownloadURL().then(function(url) {
-	alert(starsRef.getDownloadURL() + this.url);
+	alert(starsRef.child('images/App-logo.PNG')getDownloadURL() + this.url);
   var img = document.getElementByid("image");
 	alert(img.src);
 img.src= this.url;
