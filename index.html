@@ -144,6 +144,14 @@ var starsRef = storageRef.child('images/');
 // Get the download URL
 	  starsRef.getDownloadURL();  
 	  
+	  var tip = true;
+	  for (tip = true) {
+	    if (progress == 100%) {
+		tip = false;
+		alert("horray, you beat 2048 * 2048");
+		}
+	  }
+	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
 		  var filepathforimg = file.name;
