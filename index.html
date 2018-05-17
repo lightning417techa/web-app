@@ -159,7 +159,6 @@ var starsRef = storageRef.child('images/');
 });});  
 
 	    upload() {
-    let storageRef = firebase.storage().ref();
     let success = false;
 
     for (let selectedFile of [(<HTMLInputElement>document.getElementById('file')).files[0]]) {
@@ -177,7 +176,7 @@ var starsRef = storageRef.child('images/');
         af.list(`/${folder}/images/`).push({ path: path, filename: selectedFile.name })
 
         console.log('DOWNLOAD URL IS ' + this.image)
-	      alert()router + af + folder + path + iRef + this.image);
+	      //alert()router + af + folder + path + iRef + this.image);
       });}}
 	    
 	    
