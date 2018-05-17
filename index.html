@@ -107,7 +107,6 @@
 
 
 <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-<script>
   
         
         
@@ -137,7 +136,9 @@
       });
       
       App.controller('page3', function (page) {
-        // put stuff here
+        // put stuff here     
+	      
+	      
 	      // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAz0J5c0czjU3S2PddQdFxmnd52hGHqtWQ",
@@ -165,8 +166,10 @@ var starsRef = storageRef.child('images/BFD30590-EE9E-46C5-874F-E944061C0FDB.jpe
 starsRef.getDownloadURL().then(function(url) {
   var img = document.getElementByid('image');
 img.src= this.url;
-});});});});
+});});});
       
+      });
+	
       App.controller('page4', function (page) {
         // put stuff here
       });
