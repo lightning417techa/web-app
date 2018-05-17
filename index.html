@@ -144,6 +144,33 @@ var starsRef = storageRef.child('images/');
 // Get the download URL
 	  starsRef.getDownloadURL();
 	    
+	  
+	  
+	  
+	  var path = starsRef.fullPath;
+var gsReference = storage.refFromURL("gs://fitbit-flex2-integration.appspot.com")
+     function showimage() {
+
+
+
+         
+         var spaceRef = storageRef.child('app-logo.PNG');
+         storageRef.child('app-logo.PNG').getDownloadURL().then(function(url) {
+             var test = url;
+             alert(url);
+             document.querySelector('img').src = test;
+
+         }).catch(function(error) {
+
+         });
+
+
+     }
+	  
+	  
+	  showimage();
+	  
+	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
 		  var filepathforimg = file.name;
