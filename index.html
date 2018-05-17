@@ -140,7 +140,7 @@
     uploader.value = percentage;
   }, function error(err) {
   },function complete() {
-var starsRef = storageRef.child('image/');
+var starsRef = storageRef.child('images/App-logo.PNG');
 // Get the download URL
 	  alert(starsRef.getDownloadURL());
 starsRef.getDownloadURL().then(function(url) {
