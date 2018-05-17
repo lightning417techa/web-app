@@ -147,18 +147,13 @@ var starsRef = storageRef.child('images/');
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
-	alert(starsRef.getDownloadURL() + this.url);
+	alert(this.url);
   var img = document.getElementByid("image");
 	alert(img.src);
 img.src= this.url;  
 	  });
 	  
-starsRef.getDownloadURL().then(function(url) {
-	alert(starsRef.getDownloadURL() + this.url);
-  var img = document.getElementByid("image");
-	alert(img.src);
-img.src= this.url;
-});});});  
+});});  
 
     </script>
 	</body>
