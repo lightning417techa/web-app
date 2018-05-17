@@ -142,8 +142,8 @@
   },function complete() {
 var starsRef = storageRef.child('images/');
 // Get the download URL
-	  alert(starsRef.getDownloadURL() +"geturl");
-	  alert(file.name + "file.name");
+	  starsRef.getDownloadURL();
+	  
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
