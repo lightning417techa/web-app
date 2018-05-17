@@ -144,6 +144,7 @@ var starsRef = storageRef.child('image/');
 // Get the download URL
 	  alert(starsRef.getDownloadURL());
 starsRef.getDownloadURL().then(function(url) {
+	alert(starsRef.getDownloadURL() + this.url);
   var img = document.getElementByid("image");
 	alert(img.src);
 img.src= this.url;
