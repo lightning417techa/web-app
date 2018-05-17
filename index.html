@@ -144,13 +144,8 @@ var starsRef = storageRef.child('images/');
 // Get the download URL
 	  starsRef.getDownloadURL();
 	  
-	  let router = this.router;
-      let af = this.af;
-      let folder = this.folder;
-      let path = `/${this.folder}/${selectedFile.name}`;
-      var iRef = storageRef.child(path);
+	upload();
 	  
-	  alert()router + af + folder + path + iRef + this.image);
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
@@ -163,6 +158,29 @@ var starsRef = storageRef.child('images/');
 	  
 });});  
 
+	    upload() {
+    let storageRef = firebase.storage().ref();
+    let success = false;
+
+    for (let selectedFile of [(<HTMLInputElement>document.getElementById('file')).files[0]]) {
+      let router = this.router;
+      let af = this.af;
+      let folder = this.folder;
+      let path = `/${this.folder}/${selectedFile.name}`;
+      var iRef = storageRef.child(path);
+      iRef.put(selectedFile).then((snapshot) => {
+
+        // added this part which as grabbed the download url from the pushed snapshot
+        this.image = snapshot.downloadURL;
+
+        console.log('Uploaded a blob or file! Now storing the reference at', `/${this.folder}/images/`);
+        af.list(`/${folder}/images/`).push({ path: path, filename: selectedFile.name })
+
+        console.log('DOWNLOAD URL IS ' + this.image)
+	      alert()router + af + folder + path + iRef + this.image);
+      });}}
+	    
+	    
     </script>
 	</body>
 </html>
