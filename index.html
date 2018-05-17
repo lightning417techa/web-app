@@ -150,10 +150,6 @@ var starsRef = storageRef.child('images/');
 	  var path = starsRef.fullPath;
 var gsReference = storage.refFromURL("gs://fitbit-flex2-integration.appspot.com")
      function showimage() {
-
-
-
-         
          var spaceRef = storageRef.child('app-logo.PNG');
          storageRef.child('app-logo.PNG').getDownloadURL().then(function(url) {
              var test = url;
@@ -161,14 +157,7 @@ var gsReference = storage.refFromURL("gs://fitbit-flex2-integration.appspot.com"
              document.querySelector('img').src = test;
 
          }).catch(function(error) {
-
-         });
-
-
-     }
-	  
-	  
-	  showimage();
+         });}
 	  
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
@@ -178,6 +167,7 @@ var gsReference = storage.refFromURL("gs://fitbit-flex2-integration.appspot.com"
           var img = document.getElementByid("image");
 	  img.src = "https://firebasestorage.googleapis.com/v0/b/fitbit-flex2-integration.appspot.com/o/img%2" + filepathforimg + "?alt=media&token=6c380808-1ac1-432b-9944-befc912f6de8";
 	  alert(img.src + "img.src");
+		  showimage();
 	  });
 	  
 });});      
