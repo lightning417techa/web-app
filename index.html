@@ -151,11 +151,9 @@ var starsRef = storageRef.child('images/');
 		  var filepathforimg = file.name;
 	  alert(filepathforimg);
           var img = document.getElementByid("image");
-	  var newimg = "https://firebasestorage.googleapis.com/v0/b/fitbit-flex2-integration.appspot.com/o/img%2F" + filepathforimg + "?";
-	  img.src = "https://firebasestorage.googleapis.com/v0/b/fitbit-flex2-integration.appspot.com/o/img%2F" + filepathforimg + "?";
-	  alert(newimg);
+	  //img.src = 
           alert(img.src + "img.src");
-		 
+		alert(storageRef); 
 	  });
 	  
 });});      
