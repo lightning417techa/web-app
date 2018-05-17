@@ -79,7 +79,8 @@
 	
       App.controller('page4', function (page) {
         // put stuff here
-	      
+	      <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
 	        var config = {
     apiKey: "AIzaSyAz0J5c0czjU3S2PddQdFxmnd52hGHqtWQ",
     authDomain: "fitbit-flex2-integration.firebaseapp.com",
@@ -100,12 +101,7 @@
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     uploader.value = percentage;
 
-  }, function error(err) {
-
-
-  },function complete() {
-
-
+  } 
 var starsRef = storageRef.child('images/BFD30590-EE9E-46C5-874F-E944061C0FDB.jpeg');
 
 // Get the download URL
