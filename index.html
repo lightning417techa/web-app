@@ -152,14 +152,14 @@
     uploader.value = percentage;  
   }, function error(err) {
   },function complete() {
-var starsRef = storageRef.child('App-logo.PNG');
+var starsRef = storageRef.child('image');
 // Get the download URL
 	  starsRef.getDownloadURL();
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
 		  //setTimeout(function(){alert("hello" + this.url)}, 9000); 
-		  alert(document.getElementById("image").src);
+		  
 		  var filepathforimg = file.name;
 	  alert(filepathforimg);
           var img = document.getElementByid("image");
