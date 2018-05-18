@@ -160,13 +160,18 @@ var starsRef = storageRef.child('image');
 	  promise1.then(function(url) {
 		  //setTimeout(function(){alert("hello" + this.url)}, 9000); 
 		  var gsReference = storage.refFromURL('gs://bucket/images/img.png');
+		  var x = document.createElement("IMG");
+    x.setAttribute("src", gsReference);
+    x.setAttribute("width", "304");
+    x.setAttribute("height", "228");
+    x.setAttribute("alt", "The Pulpit Rock");
+    document.body.appendChild(x);
 		  
 		  var filepathforimg = file.name;
 	  alert(filepathforimg);
           var img = document.getElementByid("image");
 	  //img.src = 
           alert(img.src + "img.src");
-		 img.src= gsReference;
 		alert(starsRef.fullPath); 
 	  });
 	  
