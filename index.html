@@ -147,7 +147,7 @@
   var fileButton = document.getElementById('fileButton');
   fileButton.addEventListener('change', function(e){
   var file = e.target.files[0];
-  var storageRef = firebase.storage().ref('img/'+file.name);
+  var storageRef = firebase.storage().ref('');
   var task = storageRef.put(file);
   task.on('state_changed', function progress(snapshot) {
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
@@ -157,6 +157,13 @@
 var starsRef = storageRef.child('images/');
 // Get the download URL
 	  starsRef.getDownloadURL();
+	  
+	  storageRef = firebase.storage().ref('img/'+file.name);
+	  let image = storageRef.child('App-logo.PNG');
+	  image.getMetadata().then(function(metadata) {
+		  alert(metadata);
+  document.getElementById('image').src = metadata.downloadURLs[0]
+}).catch(function(error) { /*error handling*/ });    
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
