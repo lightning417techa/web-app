@@ -105,11 +105,9 @@
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div></div>
       <div class="app-content">
-              
+              <img class="p4img" src="" id="image">
       </div>
     </div>
-	  	    <img class="p4img" src="" id="image">
-
     
 <script src="/js/index.js"></script>
     <script src="//cdn.kik.com/app/3.0.0/app.min.js"></script>
@@ -161,7 +159,7 @@ var starsRef = storageRef.child('App-logo.PNG');
 	  
 	  let storageReff = storage.ref('img/cat.png');
 	  image.getMetadata().then(function(metadata) {
-  document.getElementById('image').src = metadata.downloadURLs[0]
+  document.getElementById("image").src = metadata.downloadURLs[0]
 }).catch(function(error) { /*error handling*/ });    
 	
 	  document.getElementById("image").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjonq5orEKoDi2ppxQ6aoHNXp-Zt9HAFISe24Zl8EAqhW7wriL";
@@ -169,7 +167,7 @@ var starsRef = storageRef.child('App-logo.PNG');
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
 		  //setTimeout(function(){alert("hello" + this.url)}, 9000); 
-		  
+		  alert(document.getElementById("image").src);
 		  var filepathforimg = file.name;
 	  alert(filepathforimg);
           var img = document.getElementByid("image");
