@@ -156,14 +156,6 @@ var starsRef = storageRef.child('App-logo.PNG');
 // Get the download URL
 	  starsRef.getDownloadURL();
 	  
-	  
-	  let storageReff = storage.ref('img/cat.png');
-	  image.getMetadata().then(function(metadata) {
-  document.getElementById("image").src = metadata.downloadURLs[0]
-}).catch(function(error) { /*error handling*/ });    
-	
-	  document.getElementById("image").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjonq5orEKoDi2ppxQ6aoHNXp-Zt9HAFISe24Zl8EAqhW7wriL";
-	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
 		  //setTimeout(function(){alert("hello" + this.url)}, 9000); 
