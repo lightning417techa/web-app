@@ -146,7 +146,6 @@
   var file = e.target.files[0];
   var storageRef = firebase.storage().ref('img/' + file.name);
   var task = storageRef.put(file);
-  var gsReference = storage.refFromURL('gs://bucket/images/stars.jpg');
   task.on('state_changed', function progress(snapshot) {
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     uploader.value = percentage;  
@@ -154,10 +153,6 @@
   function complete() {
 var starsRef = storageRef.child('image');
 // Get the download URL
-	  //starsRef.child('images/stars.jpg').getDownloadURL().then(function(url) {
-		  //var img = document.getElementById('image');
-  //img.src = url;
-	  //});
 	  starsRef.getDownloadURL();
 	  
 	  
@@ -167,7 +162,6 @@ var starsRef = storageRef.child('image');
 		  
 		  var filepathforimg = file.name;
 	  alert(filepathforimg);
-		  alert(gsReference);
           var img = document.getElementByid("image");
 	  //img.src = 
           alert(img.src + "img.src");
