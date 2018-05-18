@@ -161,7 +161,7 @@ var starsRef = storageRef.child('image');
 		  //setTimeout(function(){alert("hello" + this.url)}, 9000); 
 		  var gsReference = storage.refFromURL('gs://bucket/images/img.png');
 		  var x = document.createElement("IMG");
-    x.setAttribute("src", gsReference);
+    x.setAttribute("src", file);
     x.setAttribute("width", "304");
     x.setAttribute("height", "228");
     x.setAttribute("alt", "The Pulpit Rock");
