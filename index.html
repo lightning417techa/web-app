@@ -160,12 +160,13 @@ var starsRef = storageRef.child('image');
 	  promise1.then(function(url) {
 		  //setTimeout(function(){alert("hello" + this.url)}, 9000); 
 		  var gsReference = storage.refFromURL('gs://bucket/images/img.png');
-		  alert(gsReference);
+		  
 		  var filepathforimg = file.name;
 	  alert(filepathforimg);
           var img = document.getElementByid("image");
 	  //img.src = 
           alert(img.src + "img.src");
+		 img.src= gsReference;
 		alert(starsRef.fullPath); 
 	  });
 	  
