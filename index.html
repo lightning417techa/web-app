@@ -94,13 +94,13 @@
         <div class="app-title"></div></div>
       <div class="app-content">
         
-	      <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-	      	
+	      <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>	      	
 	      <progress class="fileuploadprgss" id="uploader" value="0" max="100">0%</progress>	
 	      <input type="file" id="fileButton" value="upload"/>
-	      <img class="p4img" src="https://firebasestorage.googleapis.com/v0/b/fitbit-flex2-integration.appspot.com/o/img%2F6E3A8657-58E0-47A2-9F46-85CDA7EDBFE3.png?alt=media&token=802a6e49-c163-46c7-b411-40d84193ff70" id="image">
-
+	      
       </div>
+	    <img class="p4img" src="" id="image">
+
     </div>
     <div class="app-page" data-page="page5">
       <div class="app-topbar">
@@ -164,7 +164,7 @@ var starsRef = storageRef.child('App-logo.PNG');
   document.getElementById('image').src = metadata.downloadURLs[0]
 }).catch(function(error) { /*error handling*/ });    
 	
-	  document.getElementById('image').src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjonq5orEKoDi2ppxQ6aoHNXp-Zt9HAFISe24Zl8EAqhW7wriL";
+	  document.getElementById("image").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjonq5orEKoDi2ppxQ6aoHNXp-Zt9HAFISe24Zl8EAqhW7wriL";
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
