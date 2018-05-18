@@ -158,8 +158,7 @@ var starsRef = storageRef.child('App-logo.PNG');
 // Get the download URL
 	  starsRef.getDownloadURL();
 	  
-	  let storageReff = storage.ref('img')
-let image = storageReff.child('cat1.png');
+	  
 	  let storageReff = storage.ref('img/cat.png');
 	  image.getMetadata().then(function(metadata) {
   document.getElementById('image').src = metadata.downloadURLs[0]
