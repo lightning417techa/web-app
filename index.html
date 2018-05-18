@@ -154,7 +154,11 @@
   },function complete() {
 var starsRef = storageRef.child('image');
 // Get the download URL
-	  starsRef.getDownloadURL();
+	  starsRef.child('images/stars.jpg').getDownloadURL().then(function(url) {
+		  var img = document.getElementById('image');
+  img.src = url;
+	  });
+	  
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
