@@ -158,6 +158,12 @@ var starsRef = storageRef.child('App-logo.PNG');
 // Get the download URL
 	  starsRef.getDownloadURL();
 	  
+	  let storageReff = storage.ref('cats')
+let image = storageReff.child('cat1.png');
+	  let storageReff = storage.ref('cats/cat.png');
+	  image.getMetadata().then(function(metadata) {
+  document.getElementById('img').src = metadata.downloadURLs[0]
+}).catch(function(error) { /*error handling*/ });    
 	  
 	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
