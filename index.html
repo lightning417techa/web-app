@@ -159,7 +159,6 @@ var starsRef = storageRef.child('image');
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
 		  //setTimeout(function(){alert("hello" + this.url)}, 9000); 
-		  var gsReference = storage.refFromURL('gs://bucket/images/img.png');
 		  var x = document.createElement("IMG");
     x.setAttribute("src", file);
     x.setAttribute("width", "304");
