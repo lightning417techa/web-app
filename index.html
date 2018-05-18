@@ -147,7 +147,7 @@
   var file = e.target.files[0];
   var storageRef = firebase.storage().ref('img/' + file.name);
   var task = storageRef.put(file);
-  var gsReference = storage.refFromURL('gs://bucket/images/stars.jpg')
+  var gsReference = storage.refFromURL('gs://bucket/images/stars.jpg');
   task.on('state_changed', function progress(snapshot) {
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     uploader.value = percentage;  
