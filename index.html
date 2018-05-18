@@ -147,6 +147,8 @@
   var storageRef = firebase.storage().ref('img/' + file.name);
   var task = storageRef.put(file);
   task.on('state_changed', function progress(snapshot) {
+	  starsRef.getDownloadURL();
+	  alert(prompt(this.url));
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     uploader.value = percentage;  
   }, function error(err) {},
