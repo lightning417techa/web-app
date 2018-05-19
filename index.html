@@ -157,7 +157,8 @@
   function complete() {
   var starsRef = storageRef.child('img/image.jpeg');
 //var starsRef = storageRef.child('image/');
-	  
+	  var downloadURL =task.snapshot.downloadURL; 
+	  alert(downloadURL);
 
   starsRef.getDownloadURL().then(function(url) {
     // Once we have the download URL, we set it to our img element
