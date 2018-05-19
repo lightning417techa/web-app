@@ -142,6 +142,7 @@
   firebase.initializeApp(config);
 	    //content items
 	    var uploader = document.getElementById('uploader');
+	    var postimg = document.getElementById('image');
 	    var fileButton = document.getElementById('fileButton');
 	    fileButton.addEventListener('change', function(e){ 	 
 		    var file = e.target.files[0];	  	
@@ -155,7 +156,7 @@
   function complete() {
 	  var downloadURL =task.snapshot.downloadURL; 
 	  alert(downloadURL);
-  
+	  postimg.src = downloadURL;
   });  });
 	   
 	    
