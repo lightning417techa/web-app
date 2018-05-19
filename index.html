@@ -149,12 +149,12 @@
   var storageRef = firebase.storage().ref('img/' + file.name);
   var task = storageRef.put(file);
   task.on('state_changed', function progress(snapshot) {
-	  storageRef.getDownloadURL();
+	  //storageRef.getDownloadURL();
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     uploader.value = percentage;  
   }, function error(err) {},
   function complete() {
-  var starsRef = storageRef.child('images/image.jpg');
+  var starsRef = storageRef.child('img/image.jpg');
 //var starsRef = storageRef.child('image/');
 	  
 
