@@ -158,9 +158,9 @@ var starsRef = storageRef.child('image');
 	  
 	  
 	  var storage = firebase.storage();
-var pathReference = storage.ref('images/image.png');
+var pathReference = storage.ref('images/image.jpg');
 var storageRefer = firebase.storage().ref();
-	  var starsRefer = storageRefer.child('images/image.png');
+	  var starsRefer = storageRefer.child('images/image.jpg');
 	  starsRefer.getDownloadURL().then(function(url) {
   // Insert url into an <img> tag to "download"
 		  alert(url + "notty");
