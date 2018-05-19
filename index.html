@@ -158,8 +158,7 @@ mountainsRef.name === mountainImagesRef.name            // true
 mountainsRef.fullPath === mountainImagesRef.fullPath    // false
 
 	  alert(ref);
-  //var task = storageRef.put(file);
-	  var task = storageRef.child('images/' + file.name).put(file);
+  var task = storageRef.put(file);
   task.on('state_changed', function progress(snapshot) {
 	  //storageRef.getDownloadURL();
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
