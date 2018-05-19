@@ -151,7 +151,6 @@
 	  
   var task = storageRef.put(file);
   task.on('state_changed', function progress(snapshot) {
-	  alert(storageRef.getDownloadURL());
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     uploader.value = percentage;  
   }, function error(err) {},
@@ -162,7 +161,7 @@
 
   starsRef.getDownloadURL().then(function(url) {
     // Once we have the download URL, we set it to our img element
-    document.getElementByid('image').src = url;
+    document.getElementd('image').src = url;
 	  alert(url);
 });
 	  
@@ -176,10 +175,10 @@
 		  
 		  var filepathforimg = file.name;
 	//  alert(filepathforimg);
-          var img = document.getElementByid("image");
-	  //img.src = 
+          var img = document.querySelector("image");
+	  img.src = url;
         //  alert(img.src + "img.src");
-		//alert(starsRef.fullPath); 
+		alert(starsRef.fullPath); 
 	  });
 	  
 });});      
