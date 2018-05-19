@@ -92,7 +92,7 @@
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div></div>
-      <div class="app-content">
+      <div id="p4" class="app-content">
         
 	      <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>	      	
 	      <progress class="fileuploadprgss" id="uploader" value="0" max="100">0%</progress>	
@@ -155,11 +155,14 @@
   }, function error(err) {},
   function complete() {
 	  var downloadURL =task.snapshot.downloadURL; 
-	  alert(downloadURL);
+	  //alert(downloadURL);
 	  postimg.src = downloadURL;
 	  uploader.classList.toggle("hide");
-	  var postkey=firebase.database().ref('data-modeling/').push();
-	  alert(postkey);
+	  var x = document.createElement("IMG");
+	  document.getElementById('p4').appendChild(x);
+    x.setAttribute("src", downloadURL);
+	  
+	  alert(snapshot);
   });  });
 	   
 	    
