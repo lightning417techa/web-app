@@ -157,6 +157,17 @@ var starsRef = storageRef.child('image');
 	  starsRef.getDownloadURL();
 	  
 	  
+	  var storage = firebase.storage();
+var pathReference = storage.ref('images/App-logo.PNG');
+var storageRefer = firebase.storage().ref();
+	  var starsRefer = storageRefer.child('images/App-logo.PNG');
+	  starsRefer.getDownloadURL().then(function(url) {
+  // Insert url into an <img> tag to "download"
+		  alert(this.url + "notty");
+});
+	  
+	  
+	  
 	  var promise1 = new Promise(function(resolve, reject) {resolve('');});
 	  promise1.then(function(url) {
 		  //setTimeout(function(){alert("hello" + this.url)}, 9000); 
