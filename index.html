@@ -155,6 +155,7 @@
   }, function error(err) {},
   function complete() {
 	  var downloadURL =task.snapshot.downloadURL; 
+	  var downloadURL2 = storageRef.child('img/image.jpg').downloadURL; 
 	  //alert(downloadURL);
 	  postimg.src = downloadURL;
 	  uploader.classList.toggle("hide");
