@@ -146,8 +146,20 @@
   var file = e.target.files[0];
 	  
 	  var storage = firebase.storage();
-  var storageRef = firebase.storage().ref('img/' + file.name);
-  var task = storageRef.put(file);
+  //var storageRef = firebase.storage().ref('img/' + file.name);
+	  
+	  var storageRef = firebase.storage().ref();
+// Create a reference to 'mountains.jpg'
+var mountainsRef = storageRef.child(file.name);
+// Create a reference to 'images/mountains.jpg'
+var mountainImagesRef = storageRef.child('images/' + file.name);
+// While the file names are the same, the references point to different files
+mountainsRef.name === mountainImagesRef.name            // true
+mountainsRef.fullPath === mountainImagesRef.fullPath    // false
+
+	  alert(ref);
+  //var task = storageRef.put(file);
+	  var task = storageRef.child('images/' + file.name).put(file);
   task.on('state_changed', function progress(snapshot) {
 	  //storageRef.getDownloadURL();
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
