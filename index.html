@@ -144,7 +144,10 @@
   var fileButton = document.getElementById('fileButton');
   fileButton.addEventListener('change', function(e){
   var file = e.target.files[0];
-  var storageRef = firebase.storage().ref('img/' + file.name);
+	  
+	  var storage = firebase.storage();
+	  var storageRef = storage.ref();
+  //var storageRef = firebase.storage().ref('img/' + file.name);
   var task = storageRef.put(file);
   task.on('state_changed', function progress(snapshot) {
 	  storageRef.getDownloadURL();
@@ -152,7 +155,22 @@
     uploader.value = percentage;  
   }, function error(err) {},
   function complete() {
-var starsRef = storageRef.child('image');
+  var starsRef = storageRef.child('image/image.jpg');
+//var starsRef = storageRef.child('image/');
+	  
+	  firebase.auth().signInAnonymously().then(function() {
+  // Once the sign in completed, we get the download URL of the image
+  starsRef.getDownloadURL().then(function(url)                             {
+    // Once we have the download URL, we set it to our img element
+    document.querySelector('image').src = url;
+	  alert(url);
+
+  }).catch(function(error) {
+    // If anything goes wrong while getting the download URL, log the error
+    console.error(error);
+  });
+});
+	  
 // Get the download URL
 	  starsRef.getDownloadURL();
 	  
