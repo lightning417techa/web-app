@@ -48,6 +48,7 @@
 	      width: 100%;
 	      height: 100%;
 	    }	    
+	    .postcon {width: 450px; height: 600; background-color: lightgray; border-radius: 25px;}
 	    .lock {opacity: 0.5; -webkit-filter: blur(5px); filter: blur(5px); background-color: none; z-index: 100;}
     </style>
   </head>
@@ -100,6 +101,7 @@
 	      
 	      <input type="file" id="fileButton" value="upload"/>
               <img class="p4img" src="" id="image">
+	      <div class="postcon" id="postcont"></div>
       </div>
     </div>
     <div class="app-page" data-page="page5">
@@ -191,7 +193,7 @@
 	  postcon.style.borderRadius = "25px";
 	  //document.getElementById('postcon').appendChild(post);
 	  postcon.appendChild(post);
-	  document.getElementById('p4').appendChild(postcon);
+	  document.getElementById('postcont').appendChild(postcon);
     post.setAttribute("src", downloadURL);	
 	  post.width = "400";
   });  });
