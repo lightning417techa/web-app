@@ -116,7 +116,6 @@
       });
       App.controller('page2', function (page) {
         // put stuff here
-        alert("hi itch");
       });
       App.controller('page3', function (page) {
         // put stuff here
@@ -126,6 +125,7 @@
       });
       App.controller('page5', function (page) {
         // put stuff here      
+	      prompt("Login", "username", "password");
       });
 
       try {
@@ -161,8 +161,7 @@
 	  var x = document.createElement("IMG");
 	  document.getElementById('p4').appendChild(x);
     x.setAttribute("src", downloadURL);	
-	  x.setAttribute("width", "400");	
-	  alert(console.log(task));
+	  x.setAttribute("width", "400");
   });  });
 	   
 	    
