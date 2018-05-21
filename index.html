@@ -183,10 +183,13 @@
 	  //alert(downloadURL);
 	  postimg.src = downloadURL;
 	  progresstracker();
-	  var x = document.createElement("IMG");
-	  document.getElementById('p4').appendChild(x);
-    x.setAttribute("src", downloadURL);	
-	  x.setAttribute("width", "400");
+	  var post = document.createElement("IMG");
+	  var postcon = document.createElement("postcon" + file.name);
+	  postcon.setAttribuite("height", "450px auto");
+	  postcon.setAttribuite("background-color", "darkgray");
+	  postcon.appendChild(post);
+    post.setAttribute("src", downloadURL);	
+	  post.setAttribute("width", "400");
   });  });
 	   
 	    
