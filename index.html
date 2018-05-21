@@ -170,7 +170,7 @@
 		    var storage = firebase.storage();
 		    var storageRef = firebase.storage().ref('img/' + file.name);
 		    var task = storageRef.put(file);
-		    
+		    progresstracker();
 		    
   task.on('state_changed', function progress(snapshot) {
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
@@ -180,7 +180,7 @@
 	  var downloadURL =task.snapshot.downloadURL; 
 	  //alert(downloadURL);
 	  postimg.src = downloadURL;
-	  progresstracker();
+	  
 	  var x = document.createElement("IMG");
 	  document.getElementById('p4').appendChild(x);
     x.setAttribute("src", downloadURL);	
