@@ -48,6 +48,160 @@
 	      width: 100%;
 	      height: 100%;
 	    }
+	    
+	    
+p {
+  color: white !important;
+}
+
+.mscontainer { 
+ width:330px; min-height:460px; /*400px or 450*/ background:#333;
+ overflow:auto; margin:20px auto; border-radius:10px; box-shadow:0 10px 8px -8px #333;
+ position: scroll; align-items: center; text-align: center;
+}
+
+.musicimg {
+    align-items: center; position: absolute;
+    margin-top: 4%; margin-bottom: 0%; width: 300px; height: 300px;
+}
+
+.btn {
+    background-color: black; /*DodgerBlue;*/ width: 20px; height: 20px;
+    border: 1px solid white; color: white; padding: 20px 20px;
+    cursor: pointer; font-size: 20px; border-radius: 40px; text-align: right;
+    float: center; overflow: auto; margin-left: auto; margin-right:auto; margin-top: 5%; /*10%*/
+    position: center; align-items: center;  justify-content: center; margin-bottom: 0%;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: white;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 90%; margin-top: 2%; height: 6px; /*15px*/ border-radius: 5px; background: solid white; /*#4CAF50*/
+    
+    opacity: 1; position: center; -webkit-transition: .2s; transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 20px; /*25px*/ height: 20px; /*25px*/
+    border-radius: 50%; background: white; cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px; height: 25px;
+    border-radius: 50%; background: white; cursor: pointer;
+}
+
+img {
+    margin-top: 5%; margin-bottom: 0%; margin-left: auto; margin-right: auto;
+
+}
+
+.percent {
+    margin-top: 2%; margin-bottom: 0%; margin-left: 75%; margin-right: auto; color: white;
+}
+
+.percentt {
+    margin-top: -9%; margin-bottom: 0%; margin-left: auto; margin-right: 75%; color: white;
+}
+.audiotitle {
+    overlay: auto; margin-bottom: 4%; margin-top: -2%; margin-left: auto;
+    margin-right: auto; color: white; text-align: center; font-size: 26px;
+}
+.audiomaker {
+    overlay: auto; margin-bottom: 2%; margin-top: -5%;
+    margin-left: auto;  margin-right: auto;
+    color: white; text-align: center;
+}
+
+.fwdbtn {
+    /*background-color: lime;*/ position: center;
+    width: 50px;  height: 30px; border: none; color: white; float: center; overflow: auto;
+    cursor: pointer; font-size: 22px;  border-radius: 30px; text-align: center; float: center;
+    overflow: auto; margin-left: auto; margin-right: 20%; margin-top: -13.6%; /*-14*/
+    position: center; align-items: center;   justify-content: center; margin-bottom: 0%;
+}
+
+.rwdbtn {
+    /*background-color: lime;*/ position: center; width: 50px; height: 30px; border: none;
+    color: white; cursor: pointer; font-size: 22px;  border-radius: 30px;
+    text-align: center; float: center;  overflow: auto;
+    margin-left: 20%; margin-right: auto; margin-top: -8.9%; /*-9.1%%*/  position: center; align-items: center; 
+    justify-content: center; margin-bottom: 0%;
+}
+
+.dropbtn {
+    position: -webkit-sticky; position: sticky; background-color: none;
+    color: white; padding: 16px; font-size: 16px; border: none;
+    cursor: pointer; margin-left: 80%; /*80*/ margin-top: -11.3%;
+}
+
+.dropbtnpos {margin-left: 35%; cursor: pointer; float: center; overflow: auto;}
+
+.dropdown {
+    position: relative; display: block; align-items: center;
+}
+
+.dropdown-content {
+    display: none; position: absolute; 
+    background-color: none;
+    width: 331px; overflow: auto; margin-left: 0%;
+}
+
+.dropdown-content a {
+    color: white; /*padding: 16px 50px;*/ padding: 10px 50px;
+    text-decoration: none; text-align: left;
+    display: block; border-top: 0.9px solid #9B9898;
+}
+
+.dropdown a:hover {background-color: #ddd; color: black;} /*#ddd*/
+
+.dropdown-content li {list-style: none;}
+
+.show {display:block;}
+.dropbtnclick {color: lime;}
+
+.playlistnames {
+  color: white; text-align: left; border: 0.7px solid white;
+}
+
+.Playlistartist {
+  color: lime; text-align: right;
+}
+.Playlistartist:hover {color: white;}
+
+.Containeralert {
+ width:330px; min-height:460px; /*400px or 450*/
+ background-color: darkgray; overflow:auto;
+ margin:20px/auto; border-radius:10px; border: none;
+ box-shadow:0 10px 8px -8px #333; position: scroll;
+ align-items: center; text-align: center;
+ z-index: 232; -webkit-filter: blur(8px);
+}
+.Containeralertext {
+  z-index: 243; overflow: auto;
+}
+
+.shufflebtn {
+    background-color: none;
+    position: absolute; width: 50px; height: 30px; border: none; color: white; 
+    cursor: pointer; font-size: 22px; border-radius: 30px;
+    text-align: center; float: center; overflow: auto; margin-left: 26%;
+    margin-right: auto; margin-top: -7%; /*-9.1%%*/ align-items: center; 
+    justify-content: center; margin-bottom: 0%;
+}
+
+.simg {
+  width: 50%; height: 50%; margin-right: 50%;
+}
+
+.dropbtn2 {
+    position: -webkit-sticky; position: sticky; background-color: none;color: white;
+    padding: 16px; font-size: 16px; border: none; cursor: pointer; margin-right: 80%; /*80*/ margin-bottom: -6.1%;
+}
+	    
+	    
     </style>
   </head>
   <body>
