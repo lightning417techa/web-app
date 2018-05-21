@@ -155,12 +155,23 @@
 	    var uploader = document.getElementById('uploader');
 	    var postimg = document.getElementById('image');
 	    var fileButton = document.getElementById('fileButton');
+	    function progresstracker() {    
+			    var int = 0;
+			    if (int == 0) {
+				    int = 1;			    
+				    uploader.classList.toggle("hide");
+			    } else {
+				    int = 0;
+				    uploader.classList.remove("hide");
+			    }}
+	    progresstracker();
 	    fileButton.addEventListener('change', function(e){ 	 
 		    var file = e.target.files[0];	  	
 		    var storage = firebase.storage();
 		    var storageRef = firebase.storage().ref('img/' + file.name);
 		    var task = storageRef.put(file);
-		    window.onLoad(uploader.classList.toggle("hide"));
+		    
+		    
   task.on('state_changed', function progress(snapshot) {
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     uploader.value = percentage;  
@@ -169,7 +180,7 @@
 	  var downloadURL =task.snapshot.downloadURL; 
 	  //alert(downloadURL);
 	  postimg.src = downloadURL;
-	  uploader.classList.toggle("hide");
+	  progresstracker();
 	  var x = document.createElement("IMG");
 	  document.getElementById('p4').appendChild(x);
     x.setAttribute("src", downloadURL);	
