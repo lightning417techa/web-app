@@ -135,7 +135,6 @@
       });
       App.controller('page4', function (page) {
         // put stuff here      
-	      var int = 1;
       });
       App.controller('page5', function (page) {
         // put stuff here      
@@ -167,7 +166,7 @@
 				    int = 0;
 				    uploader.classList.remove("hide");
 			    }}
-	    
+	    var int = 1;
 	    fileButton.addEventListener('change', function(e){ 	 
 		    var file = e.target.files[0];	  	
 		    var storage = firebase.storage();
