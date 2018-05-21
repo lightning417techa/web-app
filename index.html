@@ -198,7 +198,14 @@
   });  });
 	   
 	    function ble() {
-		   navigator.bluetooth.requestDevice;
+		   navigator.bluetooth.requestDevice({
+  filters: [{
+    name: 'Flex 2'
+  }],
+  optionalServices: ['battery_service']
+})
+.then(device => { alert("found it"); })
+.catch(error => { alert(error); });
 	    }
 	    
     </script>
