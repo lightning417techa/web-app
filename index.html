@@ -109,7 +109,7 @@
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div></div>
       <div class="app-content">
-	
+	      <button onclick="ble()">search</button>
   </div>
 </div>
 
@@ -139,8 +139,7 @@
         // put stuff here      
       });
       App.controller('page5', function (page) {
-        // put stuff here      
-	      prompt("Login", "username");
+        // put stuff here      	      
       });
 
       try {
@@ -198,6 +197,9 @@
 	  post.width = "400";
   });  });
 	   
+	    function ble() {
+		   navigator.bluetooth.requestDevice;
+	    }
 	    
     </script>
 	</body>
