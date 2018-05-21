@@ -186,7 +186,8 @@
 	  var postcon = document.createElement("postcon");
 	  postcon.style.maxWidth = "450px";
 	  postcon.style.maxHeight = "500px";
-	  postcon.style.minHeight = "450px";
+	  alert(file.width);
+	  postcon.style.minHeight = file.width + "100px";
 	  postcon.style.minWidth = "450px";
 	  postcon.style.backgroundColor = "darkgray";
 	  postcon.style.borderRadius = "25px";
