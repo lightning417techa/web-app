@@ -93,12 +93,14 @@
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div></div>
       <div class="app-content">
-        <ul>
+        <ul id-"mesasageDiv">
 		<li class="him">By Other User</li>
 		<li class="me">By this User, first message</li>
 		<li class="me">By this User, secondmessage</li>
 		<li class="me">By this User, third message</li>
 		<li class="me">By this User, fourth message</li>
+		<input type="text" id="messageInput">
+		<input type="text" id="nameInput">
 	</ul>
       </div>
     </div>
@@ -197,21 +199,60 @@
 	  postimg.src = downloadURL;
 	  progresstracker();
 	  var post = document.createElement("IMG");
-	  var postcon = document.createElement("postcon");
-	  //postcon.style.maxWidth = "700";
-	  //postcon.style.maxHeight = "800";	  
+	  var postcon = document.createElement("postcon");	   
 	  postcon.style.backgroundColor = "darkgray";
-	  postcon.style.borderRadius = "25px";
-	  //document.getElementById('postcon').appendChild(post);
+	  postcon.style.borderRadius = "25px";	  
 	  postcon.appendChild(post);
 	  document.getElementById('postcont').appendChild(postcon);
     post.setAttribute("src", downloadURL);	
 	  post.width = "400";
   });  });
-	   
-	    function ble() {
-		   Notification.requestPermission();
-	    }
+	    
+	    
+	    function start() {
+      var human = document.getElementById("ip");
+      var person = prompt("Please enter your username", "");
+      switch(person) {
+        case "Lanyx12":
+          alert("welcome LanyxSoft user");
+          break;
+        case "":
+        if (localStorage.getItem("lastname") == 2) {
+          
+        } else {
+          alert("sorry your password is incorrect note: you have reached the max amount of attempts to enter the right password, if you think there is a problem please contact the creator of this.");
+        }
+          break;
+        default:
+      }}
+    
+      $(function() {
+  // Get a reference to the root of the chat data.
+  var messagesRef = new Firebase("https://fitbit-flex2-integration.firebaseio.com/User-inputs");
+// When the user presses enter on the message input, write the message to firebase.
+  $("#messageInput").keypress(function (e) {
+    if (e.keyCode == 13) {
+      if ($("#nameInput").val() == "") {
+        alert("please enter your name");
+      } else {
+        
+        var name = $("#nameInput").val();
+        var text = $("#messageInput").val();
+        messagesRef.push({name:name, text:text});
+        $("#messageInput").val("");
+      }
+    }
+  });
+
+  // Add a callback that is triggered for each chat message.
+  messagesRef.limitToLast(50).on("child_added", function (snapshot) {
+    var message = snapshot.val();
+    $("<li/>").text(message.name).prepend($("<div/>")
+      .text(message)).appendTo($("#mesasageDiv"));
+    $("#mesasageDiv")[0].scrollTop = $("#mesasageDiv")[0].scrollHeight;
+  });
+});
+	    
 	    
     </script>
 	</body>
