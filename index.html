@@ -94,6 +94,9 @@
         <div class="app-title"></div></div>
       <div class="app-content">
         <ul id-"mesasageDiv">
+		<script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
 		<li class="him">By Other User</li>
 		<li class="me">By this User, first message</li>
 		<li class="me">By this User, secondmessage</li>
@@ -247,7 +250,7 @@
   // Add a callback that is triggered for each chat message.
   messagesRef.limitToLast(50).on("child_added", function (snapshot) {
     var message = snapshot.val();
-    $("<li/>").text(message.name).prepend($("<div/>")
+    $("<li/>").text(message.name).prepend($("<li/>")
       .text(message)).appendTo($("#mesasageDiv"));
     $("#mesasageDiv")[0].scrollTop = $("#mesasageDiv")[0].scrollHeight;
   });
