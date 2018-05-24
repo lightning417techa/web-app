@@ -94,7 +94,7 @@
         <div class="app-button left" data-back data-autotitle></div>	      
         <div class="app-title"></div></div>
       <div id="list" class="app-content">	   
-	      <div onclick="activate()" class="app-button">activate</div>
+	      <button onclick="activate()" class="app-button">activate</button>
 	      	      <ui id="listing"></ui>
         <ul id="listings">
 		
@@ -216,7 +216,7 @@
 	      var node = document.createElement("LI");
 	      var textnode = document.createTextNode("Water");    
 	      node.appendChild(textnode);
-	      document.getElementById("list").appendChild(node);
+	      document.getElementById("listing").appendChild(node);
 	      }
 	    
     </script>
