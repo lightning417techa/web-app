@@ -7,6 +7,11 @@
     <link rel="apple-touch-icon" href="meta/App-logo.PNG">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	  
+	  <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/chat.js"></script>
+	  
     <style>
       /* put your styles here */
 	    .fileuploadprgss {display:inline-block;width:100%;height: 10px;
@@ -92,10 +97,10 @@
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div></div>
-      <div id="msgcon" class="app-content">
-	      <input type="text" id="messageInput"/>
-		<input type="text" id="nameInput"/>
-        <ul id-"mesasageDiv">
+      <div class="app-content">
+	      <input type="text" id="nameInput" placeholder="Name" />
+    <input type="text" id="messageInput" placeholder="Message..." />
+        <ul id-"mesasagesDiv">
 		
 		
 		<li class="him">By Other User</li>
@@ -134,9 +139,6 @@
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script> src="https://lanyxsofthtmlcode.weebly.com/uploads/9/5/7/3/95731436/index.js_for_webapp.js"</script>
-
-<script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </div>
 </div>
 	      
@@ -215,24 +217,7 @@
   });  });
 	    
 	    
-	    function start() {
-      var human = document.getElementById("ip");
-      var person = prompt("Please enter your username", "");
-      switch(person) {
-        case "Lanyx12":
-          alert("welcome LanyxSoft user");
-          break;
-        case "":
-        if (localStorage.getItem("lastname") == 2) {
-          
-        } else {
-          alert("sorry your password is incorrect note: you have reached the max amount of attempts to enter the right password, if you think there is a problem please contact the creator of this.");
-        }
-          break;
-        default:
-      }}
-    
-      $(function() {
+	    $(function() {
   // Get a reference to the root of the chat data.
   var messagesRef = new Firebase("https://fitbit-flex2-integration.firebaseio.com/User-inputs");
 // When the user presses enter on the message input, write the message to firebase.
@@ -254,8 +239,8 @@
   messagesRef.limitToLast(50).on("child_added", function (snapshot) {
     var message = snapshot.val();
     $("<li/>").text(message.name).prepend($("<div/>")
-      .text(message)).appendTo($("#msgcon"));
-    $("#msgcon")[0].scrollTop = $("#msgcon")[0].scrollHeight;
+      .text(message)).appendTo($("#messagesDiv"));
+    $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
   });
 });
 	    
