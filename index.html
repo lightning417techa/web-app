@@ -92,7 +92,7 @@
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div></div>
-      <div class="app-content">
+      <div id="msgcon" class="app-content">
         <ul id-"mesasageDiv">
 		
 		
@@ -253,8 +253,8 @@
   messagesRef.limitToLast(50).on("child_added", function (snapshot) {
     var message = snapshot.val();
     $("<li/>").text(message.name).prepend($("<ui/>")
-      .text(message)).appendTo($("#mesasageDiv"));
-    $("#mesasageDiv")[0].scrollTop = $("#mesasageDiv")[0].scrollHeight;
+      .text(message)).appendTo($("#msgcon"));
+    $("#msgcon")[0].scrollTop = $("#msgcon")[0].scrollHeight;
   });
 });
 	    
