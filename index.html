@@ -56,7 +56,7 @@
 	    .him + .me{ border-bottom-right-radius: 5px; }
 	    .me + .me{ border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
 	    .me:last-of-type { border-bottom-right-radius: 30px; }
-	    .msgsendbtn {position:relative; bottom: 20px; right: 0px; float: right; color: blue; width: 100px; }
+	    .msgsendbtn {position:relative; bottom: 20px; right: 0px; float: bottom; color: blue; width: 100px; }
 	    
     </style>
   </head>
@@ -102,9 +102,9 @@
 		<li class="me">By this User, secondmessage</li>
 		<li class="me">By this User, third message</li>
 		<li class="me">By this User, fourth message</li>
-		<div onclick="activate()" class="msgsendbtn">Send</div>
+		
 	</ul>
-	      
+	      <div onclick="activate()" class="msgsendbtn">Send</div>
       </div>
     </div>
     <div class="app-page" data-page="page4">
