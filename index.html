@@ -150,14 +150,7 @@
         // put stuff here	      	      
       });
       App.controller('page3', function (page) {
-        // put stuff here
-	      function activate() {
-	      var node = document.createElement("LI");
-	      var textnode = document.createTextNode("Water");    
-	      node.appendChild(textnode);
-	      document.getElementById("list").appendChild(node);
-	      }
-	      
+        // put stuff here	      	      
       });
       App.controller('page4', function (page) {
         // put stuff here      
@@ -215,11 +208,16 @@
 	  postcon.appendChild(post);
 	  document.getElementById('postcont').appendChild(postcon);
     post.setAttribute("src", downloadURL);	
-	  post.width = "400";
-	  
-	  
+	  post.width = "400";	  	  
 	  	    
   });  });
+	    
+	    function activate() {
+	      var node = document.createElement("LI");
+	      var textnode = document.createTextNode("Water");    
+	      node.appendChild(textnode);
+	      document.getElementById("list").appendChild(node);
+	      }
 	    
     </script>
 	</body>
