@@ -212,29 +212,6 @@
 	  post.width = "400";
   });  });
 	    
-	    
-	    $(function() {
-  // Get a reference to the root of the chat data.
-  var messagesRef = new Firebase("https://fitbit-flex2-integration.firebaseio.com/User-inputs");
-// When the user presses enter on the message input, write the message to firebase.
-  $("#messageInput").keypress(function (e) {
-    if (e.keyCode == 13) {
-      if ($("#nameInput").val() == "") {
-        alert("please enter your name");
-      } else {
-        
-        var name = $("#nameInput").val();
-        var text = $("#messageInput").val();
-        messagesRef.push({name:name, text:text});
-        $("#messageInput").val("");
-      }
-    }
-  });
-
-var btn = document.createElement("LI");
-    document.getElementByid("messageContainer").appendChild(btn);
-	  	    
-	    
     </script>
 	</body>
 </html>
