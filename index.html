@@ -210,9 +210,10 @@
 	  post.width = "400";	  	  
 	  	    
   });  });
-		      
+	      var node = document.createElement("LI");	       
 	    function activate() {
-	      var node = document.createElement("LI");	 
+	      //var node = document.createElement("LI");
+	      node = document.createElement("LI");	 
 	      node.classList.add("me");
 	      node.innerHTML = "hello";	      
 	      document.getElementById("listings").appendChild(node);
