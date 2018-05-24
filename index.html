@@ -95,7 +95,7 @@
         <div class="app-title"></div></div>
       <div class="app-content">
         <ul id="messageContainer">
-		
+		<button onclick="hellowrld">hello World</button>
 		<li class="him">By Other User</li>
 		<li class="me">By this User, first message</li>
 		<li class="me">By this User, secondmessage</li>
@@ -208,12 +208,16 @@
     post.setAttribute("src", downloadURL);	
 	  post.width = "400";
 	  
-	  var x = document.createElement("LI");
+	  
+	  	    
+  });  });
+	    
+	function hellowrld() {
+		var x = document.createElement("LI");
     var t = document.createTextNode("Coffee");
     x.appendChild(t);
     document.getElementByid("messageContainer").appendChild(x);
-	  	    
-  });  });
+	}    
 	    
     </script>
 	</body>
