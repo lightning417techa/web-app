@@ -227,24 +227,16 @@
         var text = $("#messageInput").val();
         messagesRef.push({name:name, text:text});
         $("#messageInput").val("");
-      }
-    }
-  });
-
-  // Add a callback that is triggered for each chat message.
-  messagesRef.limitToLast(50).on("child_added", function (snapshot) {
-    var message = snapshot.val();
-	  
-var btn = document.createElement("LI");
+	      
+	      var btn = document.createElement("LI");
     var t = document.createTextNode("CLICK ME");
     btn.appendChild(t);
     document.getElementByid("messageContainer").appendChild(btn);
 	  
-    $("<p/>").text(message.name).prepend($("<li/>")
-      .text(message)).appendTo($(".me"));
-    $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
+      }
+    }
   });
-});
+
 	    
 	    
     </script>
