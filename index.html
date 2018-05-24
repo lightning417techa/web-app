@@ -94,6 +94,7 @@
         <div class="app-button left" data-back data-autotitle></div>	      
         <div class="app-title"></div></div>
       <div id="list" class="app-content">	   
+	      <div onclick="activate()" class="app-button">activate</div>
 	      	      <ui id="listing"></ui>
         <ul id="listings">
 		
@@ -150,11 +151,12 @@
       });
       App.controller('page3', function (page) {
         // put stuff here
-	      
+	      function activate() {
 	      var node = document.createElement("LI");
-    var textnode = document.createTextNode("Water");
-    node.appendChild(textnode);
-    document.getElementById("list").appendChild(node);
+	      var textnode = document.createTextNode("Water");    
+	      node.appendChild(textnode);
+	      document.getElementById("list").appendChild(node);
+	      }
 	      
       });
       App.controller('page4', function (page) {
