@@ -8,10 +8,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes"> 
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 	  
-	  <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/chat.js"></script>
-	  
     <style>
       /* put your styles here */
 	    .fileuploadprgss {display:inline-block;width:100%;height: 10px;
@@ -100,7 +96,7 @@
       <div class="app-content">
 	      <input type="text" id="nameInput" placeholder="Name" />
     <input type="text" id="messageInput" placeholder="Message..." />
-        <ul>
+        <ul id="messageContainer">
 		
 		
 		<li class="him">By Other User</li>
@@ -239,7 +235,11 @@
   messagesRef.limitToLast(50).on("child_added", function (snapshot) {
     var message = snapshot.val();
 	  
-$( "ui" ).append( "<p>Test</p>" );
+var btn = document.createElement("LI");
+    var t = document.createTextNode("CLICK ME");
+    btn.appendChild(t);
+    document.getElementByid("messageContainer").appendChild(btn);
+	  
     $("<p/>").text(message.name).prepend($("<li/>")
       .text(message)).appendTo($(".me"));
     $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
