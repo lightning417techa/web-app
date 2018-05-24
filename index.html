@@ -252,7 +252,7 @@
   // Add a callback that is triggered for each chat message.
   messagesRef.limitToLast(50).on("child_added", function (snapshot) {
     var message = snapshot.val();
-    $("<li/>").text(message.name).prepend($("<li/>")
+    $("<li/>").text(message.name).prepend($("<ui/>")
       .text(message)).appendTo($("#mesasageDiv"));
     $("#mesasageDiv")[0].scrollTop = $("#mesasageDiv")[0].scrollHeight;
   });
