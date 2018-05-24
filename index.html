@@ -93,7 +93,7 @@
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>	      
         <div class="app-title"></div></div>
-      <div id="list" class="app-content">	   
+      <div class="app-content">	   
 	      <button onclick="activate()" class="app-button">activate</button>
 	      	      <ui id="listing"></ui>
         <ul id="listings">
@@ -213,9 +213,10 @@
   });  });
 	    
 	    function activate() {
-	      var node = document.createElement("LI");
 	      var textnode = document.createTextNode("Water");    
+	      var node = document.createElement("LI");	     
 	      node.appendChild(textnode);
+	      node.class.add("me");
 	      document.getElementById("listing").appendChild(node);
 	      }
 	    
