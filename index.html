@@ -150,16 +150,15 @@
       });
       App.controller('page3', function (page) {
         // put stuff here
-	      function function1() {
+	      
     var ul = document.getElementById("listing");
     var li = document.createElement("li");
-    var children = ul.children.length + 1
-    li.setAttribute("id", "element"+children)
-		      li.classList.add("me");
+    var children = ul.children.length + 1;
+    li.setAttribute("id", "element"+children);
+    li.classList.add("me");
     li.setAttribute("value", "hello user, im bob");
     ul.appendChild(li);
-}
-	    function1();
+	      
       });
       App.controller('page4', function (page) {
         // put stuff here      
