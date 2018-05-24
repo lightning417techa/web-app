@@ -103,6 +103,7 @@
 		<li class="me">By this User, fourth message</li>
 		
 	</ul>
+	      <div id="msgs"></div>
       </div>
     </div>
     <div class="app-page" data-page="page4">
@@ -213,10 +214,10 @@
   });  });
 	    
 	function hellowrld() {
-		var x = document.createElement("LI");
+		var x = document.createElement("UI");
     var t = document.createTextNode("Coffee");
     x.appendChild(t);
-    document.getElementByid("messageContainer").appendChild(x);
+    document.getElementByid("msgs").appendChild(x);
 	}    
 	hellowrld();
 	    
