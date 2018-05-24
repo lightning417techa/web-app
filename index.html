@@ -56,7 +56,13 @@
 	    .him + .me{ border-bottom-right-radius: 5px; }
 	    .me + .me{ border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
 	    .me:last-of-type { border-bottom-right-radius: 30px; }
-	    .msgsendbtn {position: fixed; bottom: 10; right: 10px; float: bottom; color: blue; width: 100px; }
+	    .msgsendbtn {position: fixed; bottom: 10; right: 10px; float: bottom; color: blue; width: 100px; }	
+	    
+	    .navbar {
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the bottom of the page */
+    width: 100%; /* Full width */
+}
 	    
     </style>
   </head>
@@ -103,6 +109,7 @@
 		<li class="me">By this User, third message</li>
 		<li class="me">By this User, fourth message</li>
 		
+		<div class="navbar"></div>
 	</ul>
 	      <div onclick="activate()" class="msgsendbtn">Send</div>
       </div>
