@@ -239,7 +239,7 @@
   messagesRef.limitToLast(50).on("child_added", function (snapshot) {
     var message = snapshot.val();
 	  
-$( "#messagesDiv" ).prepend( "<p>Test</p>" );
+$( "ui" ).append( "<p>Test</p>" );
     $("<li/>").text(message.name).prepend($("<div/>")
       .text(message)).appendTo($("#messagesDiv"));
     $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
