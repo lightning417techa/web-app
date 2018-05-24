@@ -56,7 +56,7 @@
 	    .him + .me{ border-bottom-right-radius: 5px; }
 	    .me + .me{ border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
 	    .me:last-of-type { border-bottom-right-radius: 30px; }
-	    .msgsendbtn {position:relative; display:inline-block; float: right; color: blue; width: 100px; }
+	    .msgsendbtn {position:fixed; bottom: 20px; right: 0px; float: right; color: blue; width: 100px; }
 	    
     </style>
   </head>
@@ -150,7 +150,8 @@
         // put stuff here	      	      
       });
       App.controller('page3', function (page) {
-        // put stuff here	      	      
+        // put stuff here	      	   
+	      window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
       });
       App.controller('page4', function (page) {
         // put stuff here      
