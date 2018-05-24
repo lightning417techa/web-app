@@ -97,7 +97,7 @@
         <ul>
 		
 		<li class="him">By Other User</li>
-		<li class="me">By this User, first message</li>
+		<li id="mee" class="me">By this User, first message</li>
 		<li class="me">By this User, secondmessage</li>
 		<li class="me">By this User, third message</li>
 		<li class="me">By this User, fourth message</li>
@@ -241,11 +241,9 @@
   });  });
 	    
 	function hellowrld() {
-		var x = document.createElement("UI");
+		var x = document.createElement("li");
 		x.classList.add("me");
-    var t = document.createTextNode("Coffee");
-    x.appendChild(t);
-    document.getElementByid("msgs").appendChild(x);
+    document.getElementByid("mee").appendChild(x);
 	}    
 	hellowrld();
 	    
