@@ -95,7 +95,6 @@
         <div class="app-title"></div></div>
       <div class="app-content">	   
 	      <button onclick="activate()" class="app-button">activate</button>
-	      	      <ui id="listing"></ui>
         <ul id="listings">
 		
 		<li class="him">By Other User</li>
@@ -211,10 +210,10 @@
 	  post.width = "400";	  	  
 	  	    
   });  });
-	    
+	
+	    var node = document.createElement("LI");	     
 	    function activate() {
-	      
-	      var node = document.createElement("LI");	     
+	      //var node = document.createElement("LI");	     	      
 	      node.innerHTML = "hello";
 	      node.classList.add("me");
 	      document.getElementById("listings").appendChild(node);
