@@ -100,7 +100,7 @@
       <div class="app-content">
 	      <input type="text" id="nameInput" placeholder="Name" />
     <input type="text" id="messageInput" placeholder="Message..." />
-        <ul id="mesasagesDiv">
+        <ul>
 		
 		
 		<li class="him">By Other User</li>
@@ -240,8 +240,8 @@
     var message = snapshot.val();
 	  
 $( "ui" ).append( "<p>Test</p>" );
-    $("<li/>").text(message.name).prepend($("<div/>")
-      .text(message)).appendTo($("#messagesDiv"));
+    $("<p/>").text(message.name).prepend($("<li/>")
+      .text(message)).appendTo($(".me"));
     $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
   });
 });
