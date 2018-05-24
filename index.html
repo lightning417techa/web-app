@@ -94,10 +94,10 @@
         <div class="app-button left" data-back data-autotitle></div>	      
         <div class="app-title"></div></div>
       <div class="app-content">	      
-        <ul>
+        <ul id="list">
 		
 		<li class="him">By Other User</li>
-		<li id="mee" class="me">By this User, first message</li>
+		<li class="me">By this User, first message</li>
 		<li class="me">By this User, secondmessage</li>
 		<li class="me">By this User, third message</li>
 		<li class="me">By this User, fourth message</li>
@@ -240,11 +240,13 @@
 	  	    
   });  });
 	    
-	function hellowrld() {
-	
-    document.getElementByid("mee").value = "guyvfgyjvrygjvfgyjvgtfyvftykqivagtyfkvbygkvsbygkevykbekwbhjkvabekvfbehuvskbhksbekvb";
-	}    
-	hellowrld();
+	function function1() {
+  var ul = document.getElementById("list");
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode("Four"));
+  ul.appendChild(li);
+}
+	    function1();
 	    
     </script>
 	</body>
