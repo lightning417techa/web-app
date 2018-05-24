@@ -151,12 +151,10 @@
       App.controller('page3', function (page) {
         // put stuff here
 	      
-    var ul = document.getElementById("list");
-    var li = document.createElement("li");
-    var children = ul.children.length + 1;
-    li.classList.add("me");
-    li.setAttribute("value", "hello user, im bob");
-    ul.appendChild(li);
+	      var node = document.createElement("LI");
+    var textnode = document.createTextNode("Water");
+    node.appendChild(textnode);
+    document.getElementById("list").appendChild(node);
 	      
       });
       App.controller('page4', function (page) {
