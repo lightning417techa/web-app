@@ -93,7 +93,7 @@
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>	      
         <div class="app-title"></div></div>
-      <div class="app-content">	   
+      <div id="list" class="app-content">	   
 	      	      <ui id="listing"></ui>
         <ul id="listings">
 		
@@ -151,10 +151,9 @@
       App.controller('page3', function (page) {
         // put stuff here
 	      
-    var ul = document.getElementById("listing");
+    var ul = document.getElementById("list");
     var li = document.createElement("li");
     var children = ul.children.length + 1;
-    li.setAttribute("id", "element"+children);
     li.classList.add("me");
     li.setAttribute("value", "hello user, im bob");
     ul.appendChild(li);
