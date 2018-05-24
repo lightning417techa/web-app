@@ -94,10 +94,7 @@
         <div class="app-button left" data-back data-autotitle></div>
         <div class="app-title"></div></div>
       <div class="app-content">
-	      <input type="text" id="nameInput" placeholder="Name" />
-    <input type="text" id="messageInput" placeholder="Message..." />
         <ul id="messageContainer">
-		
 		
 		<li class="him">By Other User</li>
 		<li class="me">By this User, first message</li>
@@ -210,6 +207,12 @@
 	  document.getElementById('postcont').appendChild(postcon);
     post.setAttribute("src", downloadURL);	
 	  post.width = "400";
+	  
+	  var x = document.createElement("LI");
+    var t = document.createTextNode("Coffee");
+    x.appendChild(t);
+    document.getElementByid("messageContainer").appendChild(x);
+	  	    
   });  });
 	    
     </script>
