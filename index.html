@@ -224,6 +224,15 @@
 	  	    
   });  });
 	    
+	    function function1() {
+    var ul = document.getElementById("listing");
+    var li = document.createElement("li");
+    var children = ul.children.length + 1
+    li.setAttribute("id", "element"+children)
+    li.appendChild(document.createTextNode("Element "+children));
+    ul.appendChild(li);
+}
+	    function1();
 	    
     </script>
 	</body>
