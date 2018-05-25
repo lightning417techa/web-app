@@ -215,6 +215,17 @@
   });  });
 	      var node = document.createElement("LI");	
 	    function activate() {
+		    
+		    var ref = firebase.database().ref("users");
+		    var ticket = "";
+ref.on("value", function(snapshot) {
+    var childData = snapshot.val();
+    var key = Object.keys(childData)[0];    //this will return 1st key.         
+    ticket = childData[key].id;
+});
+		    
+		    alert(ticket);
+		    
 	      var message = document.getElementById("msg");
 	      //var node = document.createElement("LI");
 	      node = document.createElement("LI");	 
