@@ -218,8 +218,8 @@
   });  });
 	      var node = document.createElement("LI");	
 	    function activate() {
-		    
-		    var ref = firebase.database().ref("users");
+		    var ref = new Firebase("https://fitbit-flex2-integration.firebaseio.com/User-inputs");
+		    //var ref = firebase.database().ref("users");
 		    var ticket = "";
 ref.on("value", function(snapshot) {
     var childData = snapshot.val();
