@@ -81,6 +81,12 @@
 	<div class="app-section">
           <div class="app-button" data-target="page6">Messenger</div>
         </div>
+	<div class="app-section">
+          <div class="app-button" data-target="settings">Social</div>
+	    <div class="app-section">
+              <div class="app-button" data-target="settingsp1">Social</div>
+            </div>
+        </div>
       </div>
     </div>
 
@@ -142,6 +148,22 @@
 	      <embed src="https://lightning417techa.github.io/LanyxSoft_webapp_extension/"></embed>
       </div>
     </div>	
+    <div class="app-page" data-page="settings">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Settings</div>
+      </div>
+      <div class="app-content">
+	      <div class="app-page" data-page="settings">    
+		      <div class="app-topbar">       
+		        <div class="app-button left" data-back data-autotitle></div>       
+		        <div class="app-title">Settings</div>      
+		      </div>
+		      <div class="app-content">      
+		      </div>     
+	      </div>	   
+      </div>
+    </div>	
 
 <script src="https://lanyxsofthtmlcode.weebly.com/uploads/9/5/7/3/95731436/app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
@@ -176,6 +198,13 @@
         // put stuff here      	      
 	      alert("Welcome to LanyxSoft Messenger Beta note: this is still in betaa testing so please, feel free to give feedback at l417tofficial@gmail.com");
       });
+      App.controller('settings', function (page) {
+        // put stuff here      	      
+      });
+	    App.controller('settingsp1', function (page) {        
+		    // put stuff here      	            
+	    });
+
 
       try {
         App.restore();
@@ -228,12 +257,7 @@
     post.setAttribute("src", downloadURL);	
 	  post.width = "400";	  	  
 	  	    
-  });  });
-	    
-	    function login() {
-	        var username = prompt("Username", "");
-		var password = prompt("Password", "");		    
-	    }
+  });  });	   	    
 	    
 	      var node = document.createElement("LI");	
 	    function activate() {		    		    
@@ -244,6 +268,19 @@
 	      node.innerHTML = message.value;	      
 	      document.getElementById("listings").appendChild(node);
 	      }
+	    
+	    
+	    (function () {    
+		    var old = console.log;
+		    var logger = document.getElementById('log');
+		    console.log = function () {  
+			    for (var i = 0; i < arguments.length; i++) {      
+				    if (typeof arguments[i] == 'object') {       
+					    logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(arguments[i], undefined, 2) : arguments[i]) + '<br />';
+				    } else {       
+					    logger.innerHTML += arguments[i] + '<br />';  
+	    }}}})();
+
 	    
     </script>
 	</body>
