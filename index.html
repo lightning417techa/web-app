@@ -102,7 +102,7 @@
 		<li class="me">By this User, secondmessage</li>
 		<li class="me">By this User, third message</li>
 		<li class="me">By this User, fourth message</li>
-			<input placeholder="message">
+			<input id="msg" placeholder="message">
 	      <div onclick="activate()" class="msgsendbtn">Send</div>
 	</ul>
 	      
@@ -213,12 +213,13 @@
 	  post.width = "400";	  	  
 	  	    
   });  });
-	      var node = document.createElement("LI");	       
+	      var node = document.createElement("LI");	
 	    function activate() {
+	      var message = document.getElementById("msg");
 	      //var node = document.createElement("LI");
 	      node = document.createElement("LI");	 
 	      node.classList.add("me");
-	      node.innerHTML = "hello";	      
+	      node.innerHTML = msg.value;	      
 	      document.getElementById("listings").appendChild(node);
 	      }
 	    
