@@ -217,26 +217,7 @@
 	  	    
   });  });
 	      var node = document.createElement("LI");	
-	    function activate() {
-		    var ref = new Firebase("https://fitbit-flex2-integration.firebaseio.com/User-inputs");
-		    //var ref = firebase.database().ref("users");
-		    var ticket = "";
-ref.on("value", function(snapshot) {
-    var childData = snapshot.val();
-    var key = Object.keys(childData)[0];    //this will return 1st key.         
-    ticket = childData[key].id;
-});
-		    
-		    messagesRef.limitToLast(500).on("child_added", function (snapshot) {
-    var message = snapshot.val();
-    $("<li/>").text(message.name).prepend($("<div/>")
-      .text(message)).appendTo($("#messagesDiv"));
-    $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
-  });
-});
-		    
-		    alert(ticket);
-		    
+	    function activate() {		    		    
 	      var message = document.getElementById("msg");
 	      //var node = document.createElement("LI");
 	      node = document.createElement("LI");	 
