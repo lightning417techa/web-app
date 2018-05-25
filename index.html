@@ -57,7 +57,7 @@
 	    .me + .me{ border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
 	    .me:last-of-type { border-bottom-right-radius: 30px; }
 	    .msgsendbtn {bottom: 10; right: 10px; float: bottom; color: blue; width: 100px; }		    
-	    
+	    embed {width: 100%; height: 100%;}
     </style>
   </head>
   <body>
@@ -138,7 +138,7 @@
         <div class="app-title">Messenger</div>
       </div>
       <div class="app-content">
-        
+	      <embed src="https://lightning417techa.github.io/LanyxSoft_webapp_extension/"></embed>
       </div>
     </div>	
 
@@ -237,35 +237,6 @@
 	      node.innerHTML = msg.value;	      
 	      document.getElementById("listings").appendChild(node);
 	      }
-	    
-	    
-	    
-	    $(function() {
-  // Get a reference to the root of the chat data.
-  var messagesRef = new Firebase("https://fitbit-flex2-integration.firebaseio.com/User-inputs");
-// When the user presses enter on the message input, write the message to firebase.
-  $("#messageInput").keypress(function (e) {
-    if (e.keyCode == 13) {
-      if ($("#nameInput").val() == "") {
-        alert("please enter your name");
-      } else {
-        
-        var name = $("#nameInput").val();
-        var text = $("#messageInput").val();
-        messagesRef.push({name:name, text:text});
-        $("#messageInput").val("");
-      }
-    }
-  });
-
-  // Add a callback that is triggered for each chat message.
-  messagesRef.limitToLast(500).on("child_added", function (snapshot) {
-    var message = snapshot.val();
-    $("<li/>").text(message.name).prepend($("<div/>")
-      .text(message)).appendTo($("#messagesDiv"));
-    $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
-  });
-});
 	    
     </script>
 	</body>
