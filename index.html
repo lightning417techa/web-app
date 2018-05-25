@@ -227,6 +227,14 @@ ref.on("value", function(snapshot) {
     ticket = childData[key].id;
 });
 		    
+		    messagesRef.limitToLast(500).on("child_added", function (snapshot) {
+    var message = snapshot.val();
+    $("<li/>").text(message.name).prepend($("<div/>")
+      .text(message)).appendTo($("#messagesDiv"));
+    $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
+  });
+});
+		    
 		    alert(ticket);
 		    
 	      var message = document.getElementById("msg");
