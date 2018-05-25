@@ -78,6 +78,9 @@
 	<div class="app-section">
           <div class="app-button" data-target="page5">Login</div>
         </div>
+	<div class="app-section">
+          <div class="app-button" data-target="page6">Messenger</div>
+        </div>
       </div>
     </div>
 
@@ -95,9 +98,6 @@
         <div class="app-button left" data-back data-autotitle></div>	      
         <div class="app-title"></div></div>
       <div class="app-content">	   	      
-	      <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	      
         <ul id="listings">
 		
 		<li class="him">By Other User</li>
@@ -106,12 +106,8 @@
 		<li class="me">By this User, third message</li>
 		<li class="me">By this User, fourth message</li>
 			<input id="msg" placeholder="message">
-	      <div onclick="activate()" class="msgsendbtn">Send</div>
-		<div id="messagesDiv"></div>
-    <input type="text" id="nameInput" placeholder="Name" />
-		<input type="text" id="messageInput" placeholder="Message..." />
-	</ul>
-	      
+	      <div onclick="activate()" class="msgsendbtn">Send</div>	
+	</ul>	      
       </div>
     </div>
     <div class="app-page" data-page="page4">
@@ -134,8 +130,17 @@
         <div class="app-title"></div></div>
       <div class="app-content">
 	      <div onclick="ble()">search</div>
-  </div>
-</div>
+     </div>
+   </div>
+   <div class="app-page" data-page="page6">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Messenger</div>
+      </div>
+      <div class="app-content">
+        
+      </div>
+    </div>	
 
 <script src="https://lanyxsofthtmlcode.weebly.com/uploads/9/5/7/3/95731436/app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
@@ -165,6 +170,10 @@
       });
       App.controller('page5', function (page) {
         // put stuff here      	      
+      });
+      App.controller('page6', function (page) {
+        // put stuff here      	      
+	      alert("Welcome to LanyxSoft Messenger Beta note: this is still in betaa testing so please, feel free to give feedback at l417tofficial@gmail.com");
       });
 
       try {
