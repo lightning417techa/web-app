@@ -84,6 +84,9 @@
 	<div class="app-section">
           <div class="app-button" data-target="settings">Settings</div>	    
         </div>
+	<div class="app-section">
+          <div class="app-button" data-target="music">music</div>	    
+        </div>
       </div>
     </div>
 
@@ -163,8 +166,17 @@
 		        <div class="app-title">Settings > General</div>      
 		      </div>
 		      <div class="app-content">      
-		      </div>     
+      </div>     
     </div>	   
+        <div class="app-page" data-page="music">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Music</div>
+      </div>
+      <div class="app-content">
+              
+      </div>
+    </div>	
 
 <script src="https://lanyxsofthtmlcode.weebly.com/uploads/9/5/7/3/95731436/app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
@@ -206,6 +218,9 @@
 		    // put stuff here      	  
 		    console.log("hi");
 	    });
+      App.controller('music', function (page) {
+        // put stuff here      	      
+      });
 
 
       try {
