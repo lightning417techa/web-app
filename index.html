@@ -61,7 +61,7 @@
 	    
 	    input[type="text"]:disabled {background: #dddddd;} 
 	    .full-screen-cover {border:none; -webkit-filter: blur(1px); position:absolute; overflow:auto; width:100%; height:100%; opacity: 0.8; background-color:darkgray; z-index:77;}
-	    .full-screen-cover:div {disabled="disabled"; }
+	    .full-screen-cover.show {display:none; }
     </style>
   </head>
   <body>
@@ -175,12 +175,11 @@
     </div>	      
     <div class="app-page" data-page="control-center">
     	    <div class="app-topbar">		    	    
-		    <div class="full-screen-cover">
           <div class="app-button left" data-back data-autotitle></div>
-			    <div class="app-title">Base 17</div></div>
+			    <div class="app-title">Base 17</div>
        	    </div>     
 	    <div class="app-content">      
-		    	    <div class="full-screen-cover"></div>
+		    
 	    </div>
     </div>	
 
