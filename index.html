@@ -63,6 +63,7 @@
 	    .full-screen-cover {border:none; -webkit-filter: blur(1px); position:absolute; overflow:auto; width:100%; height:100%; opacity: 0.8; background-color:darkgray; z-index:77;}
 	    .full-screen-cover.show {display:none; }
 	    
+	    .consolelogs {background: #333;}
 	    .log-boolean, 
 	    .log-undefined {color: magenta;}
 	    .log-object, 
@@ -186,7 +187,9 @@
 			    <div class="app-title">Base 17</div>
        	    </div>     	    	    
 	    <div class="app-content">      
-		    <p id="logger"></p>
+		    <div class="consolelogs">		    
+			    <pre id="logger"></pre>
+		    </div>
 	    </div>
     </div>	
 
