@@ -220,8 +220,19 @@
         // put stuff here      	      
       });
 	    App.controller('settingsp1', function (page) {        
-		    // put stuff here      	  
-		    console.log("hi");
+		    // put stuff here      	
+		    (function () {
+    var old = console.log;
+    var logger = document.getElementById('log');
+    console.log = function () {
+      for (var i = 0; i < arguments.length; i++) {
+        if (typeof arguments[i] == 'object') {
+            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(arguments[i], undefined, 2) : arguments[i]) + '<br />';
+        } else {
+            logger.innerHTML += arguments[i] + '<br />';
+        }}}})();
+
+		    
 		    console.log(navigator.platform,navigator.userAgent,"Online status: " + navigator.onLine, navigator.language, new Date());
 	    });
       App.controller('control-center', function (page) {
@@ -293,20 +304,7 @@
 	      }
 	    
 	    
-	    (function () {
-    var old = console.log;
-    var logger = document.getElementById('log');
-    console.log = function () {
-      for (var i = 0; i < arguments.length; i++) {
-        if (typeof arguments[i] == 'object') {
-            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(arguments[i], undefined, 2) : arguments[i]) + '<br />';
-        } else {
-            logger.innerHTML += arguments[i] + '<br />';
-        }
-      }
-    }
-})();
-	     console.log(navigator.platform,navigator.userAgent,"Online status: " + navigator.onLine, navigator.language, new Date());	  	    
+	    	     	  	    
 	    
     </script>
 	</body>
