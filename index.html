@@ -228,7 +228,6 @@
       });
 	    App.controller('settingsp1', function (page) {        
 		    // put stuff here      			    
-		    console.log(navigator.platform,navigator.userAgent,"Online status: " + navigator.onLine, navigator.language, new Date());
 	    });
       App.controller('control-center', function (page) {
         // put stuff here      	      
@@ -301,7 +300,7 @@
 	    
 	    	     	  	    
 	    
-	  
+	  alert(console.old);
 	    function (logger) {    
 		    console.old = console.log;
   
