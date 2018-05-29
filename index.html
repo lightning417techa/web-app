@@ -59,6 +59,8 @@
 	    .msgsendbtn {bottom: 10; right: 10px; float: bottom; color: blue; width: 100px; }		    
 	    embed {width: 100%; height: 80%;}	    
 	    
+	    .full-screen-cover {width:100%; height:100%; opacity: 0.6; background-color:darkgray; z-index:77;}
+	    
     </style>
   </head>
   <body>
@@ -86,7 +88,7 @@
           <div class="app-button" data-target="settings">Settings</div>	    
         </div>
 	<div class="app-section">
-          <div class="app-button" data-target="music">music</div>	    
+          <div class="app-button" data-target="control-center">Control Pannel</div>	    
         </div>
       </div>
     </div>
@@ -170,13 +172,13 @@
 			      <pre id="log"></pre>
       </div>     
     </div>	      
-    <div class="app-page" data-page="music">
+    <div class="app-page" data-page="control-center">
     	    <div class="app-topbar">
           <div class="app-button left" data-back data-autotitle></div>
-          <div class="app-title">Music</div>
+          <div class="app-title">Base 17</div>
        	    </div>     
-	    <div class="app-content">
-      
+	    <div class="app-content">      
+		    <div class="full-screen-cover"></div>
 	    </div>
     </div>	
 
@@ -221,7 +223,7 @@
 		    console.log("hi");
 		    console.log(navigator.platform,navigator.userAgent,"Online status: " + navigator.onLine, navigator.language, new Date());
 	    });
-      App.controller('music', function (page) {
+      App.controller('control-center', function (page) {
         // put stuff here      	      
       });
 
