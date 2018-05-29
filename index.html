@@ -63,7 +63,6 @@
 	    .full-screen-cover {border:none; -webkit-filter: blur(1px); position:absolute; overflow:auto; width:100%; height:100%; opacity: 0.8; background-color:darkgray; z-index:77;}
 	    .full-screen-cover.show {display:none; }
 	    
-	    /* body {background: #333;} */
 	    .log-boolean,
 	    .log-undefined {color: magenta;}
 	    .log-object,
@@ -325,7 +324,7 @@
 			    }       
 			    logger.innerHTML += output + "<br>";    
 			    console.old.apply(undefined, arguments);    
-		    };})(document.getElementById("logger"));
+		    };})(document.getElementByid("logger"));
 	    // Testing
 	    console.log("Hi!", {a:3, b:6}, 42, true);
 	    console.log("Multiple", "arguments", "here");
