@@ -165,7 +165,8 @@
 		        <div class="app-button left" data-back data-autotitle></div>       
 		        <div class="app-title">Settings > General</div>      
 		      </div>
-		      <div class="app-content">      
+		      <div class="app-content">     
+			      <pre id="log"></pre>
       </div>     
     </div>	   
         <div class="app-page" data-page="music">
@@ -217,6 +218,7 @@
 	    App.controller('settingsp1', function (page) {        
 		    // put stuff here      	  
 		    console.log("hi");
+		    console.log(navigator.platform,navigator.userAgent,"Online status: " + navigator.onLine, navigator.language, new Date());
 	    });
       App.controller('music', function (page) {
         // put stuff here      	      
