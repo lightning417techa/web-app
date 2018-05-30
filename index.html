@@ -190,9 +190,14 @@
 	    <div class="app-content">      
 		    <div class="consolelogs">		    
 			    <pre id="logger"></pre>
+			    <input id="commandinp" type="text">
+			    <div onclick="entercom">Enter</div>
 			    
-			    <script>
-				    
+			    <script>				
+				    finction entercom() {				    
+					    var inp = document.getElementById("commandimp");
+					    console.log(imp);
+				    }
 				    
 				    (function (logger) {
     console.old = console.log;
