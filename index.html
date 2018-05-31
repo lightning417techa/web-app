@@ -312,7 +312,8 @@ console.log("device language:", navigator.language);
   task.on('state_changed', function progress(snapshot) {
     var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
     uploader.value = percentage;  
-  }, function error(err) {},
+	  console.log(file);
+  }, function error(err) {console.log(err);},
   function complete() {
 	  var downloadURL =task.snapshot.downloadURL; 
 	  //alert(downloadURL);
