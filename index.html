@@ -226,9 +226,15 @@ console.log("is online:", navigator.onLine);
 console.log("device language:", navigator.language);	
 var orientation = screen.msOrientation || (screen.orientation || screen.mozOrientation || {}).type;    
 console.log(orientation);     
-window.addEventListener("orientationchange", function() {
-  console.log(orientation);   
-}, false);				    
+function nun {
+  console.olconsole.olg(orientation);
+  setTimeout(nun, 2000);
+}
+nun();
+window.addEventListener('orientationchange', nun);
+  
+// Initial execution if needed
+doOnOrientationChange();		    
 				    
 				    
 				    
