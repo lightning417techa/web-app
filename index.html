@@ -223,7 +223,9 @@ console.log(null, undefined);
 console.log(navigator.platform,navigator.userAgent, new Date());
 console.log("Platform:", navigator.platform);
 console.log("is online:", navigator.onLine);
-console.log("device language:", navigator.language);				    
+console.log("device language:", navigator.language);	
+var orientation = screen.msOrientation || (screen.orientation || screen.mozOrientation || {}).type;    
+console.log(orientation);     
 				    
 				    
 				    
