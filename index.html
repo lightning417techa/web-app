@@ -98,8 +98,12 @@
           <div class="app-button" data-target="settings">Settings</div>	    
         </div>
 	<div class="app-section">
-          <div class="app-button" data-target="control-center">Control Pannel</div>	    
+          <div class="app-button" data-target="Music">Music</div>	    
         </div>
+	<div class="app-section">
+          <div class="app-button" data-target="control-center">Control Pannel</div>	    
+        </div>            
+	 </div>
       </div>
     </div>
 
@@ -172,7 +176,16 @@
               </div>
 	      
       </div>
-    </div>	
+    </div>
+    <div class="app-page" data-page="Music">    
+      <div class="app-topbar">       
+        <div class="app-button left" data-back data-autotitle></div>       
+	<div class="app-title">Music</div>      
+      </div>
+      <div class="app-content">     
+			      
+      </div>     
+    </div>	      
     <div class="app-page" data-page="settingsp1">    
 		      <div class="app-topbar">       
 		        <div class="app-button left" data-back data-autotitle></div>       
@@ -285,6 +298,9 @@ window.addEventListener('orientationchange', nun);
 	    App.controller('settingsp1', function (page) {        
 		    // put stuff here      			    
 	    });
+      App.controller('Music', function (page) {
+        // put stuff here      	      
+      });
       App.controller('control-center', function (page) {
         // put stuff here      	      
       });
